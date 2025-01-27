@@ -37,12 +37,10 @@ public class MainApp {
          System.out.println();
       }
 
-      System.out.println("find user by model and series:");
-      User userByCar = userService.getUserByCar("BMW", 2021);
-      System.out.println(userByCar.getFirstName());
-      System.out.println(userByCar.getLastName());
-      System.out.println(userByCar.getCar().getModel());
-      System.out.println(userByCar.getCar().getSeries());
+      for (User user : userService.getUserByCar("Toyota", 2020)) {
+         System.out.println(user);
+      }
+
 
       context.close();
    }

@@ -26,15 +26,15 @@ public class UserDaoImp implements UserDao {
       return query.getResultList();
    }
    @Override
-   public User getUserByCar(String model, int series) {
+   public List<User> getUserByCar(String model, int series) {
 
       String hql = "FROM User u WHERE u.car.model = :model AND u.car.series = :series";
-      TypedQuery<User> query = sessionFactory.getCurrentSession().createQuery(hql, User.class);
+      TypedQuery<User> query = sessionFactory.getCurrentSession().createQuery(hql);
       query.setParameter("model", model);
       query.setParameter("series", series);
 
-      List<User> users = query.getResultList();
-      return users.isEmpty() ? null : users.get(0);
+
+      return query.getResultList();
    }
 
 
