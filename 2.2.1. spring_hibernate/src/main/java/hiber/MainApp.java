@@ -17,15 +17,15 @@ public class MainApp {
 
       UserService userService = context.getBean(UserService.class);
 
-//      Car car1 = new Car("Toyota", 2020);
-//      Car car2 = new Car("BMW", 2021);
-//      Car car3 = new Car("Mercedes-benz", 2022);
-//      Car car4 = new Car("Skoda", 2023);
-//
-//      userService.add(new User("User1", "Lastname1", "user1@mail.ru", car1));
-//      userService.add(new User("User2", "Lastname2", "user2@mail.ru",car2));
-//      userService.add(new User("User3", "Lastname3", "user3@mail.ru",car3));
-//      userService.add(new User("User4", "Lastname4", "user4@mail.ru",car4));
+      Car car1 = new Car("Toyota", 2020);
+      Car car2 = new Car("BMW", 2021);
+      Car car3 = new Car("Mercedes-benz", 2022);
+      Car car4 = new Car("Skoda", 2023);
+
+      userService.add(new User("User1", "Lastname1", "user1@mail.ru", car1));
+      userService.add(new User("User2", "Lastname2", "user2@mail.ru",car2));
+      userService.add(new User("User3", "Lastname3", "user3@mail.ru",car3));
+      userService.add(new User("User4", "Lastname4", "user4@mail.ru",car4));
 
 
       List<User> users = userService.listUsers();
